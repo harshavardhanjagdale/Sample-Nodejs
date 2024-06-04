@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the source code from the Git repository
-                git 'https://github.com/harshavardhanjagdale/Sample-Nodejs'
+                git checkout 'https://github.com/harshavardhanjagdale/Sample-Nodejs'
             }
         }
         
