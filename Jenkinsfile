@@ -5,15 +5,14 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the source code from the Git repository
-                git checkout 'https://github.com/harshavardhanjagdale/Sample-Nodejs'
+                git url: 'https://github.com/harshavardhanjagdale/Sample-Nodejs'
             }
         }
         
         stage('Install Dependencies') {
             steps {
                 // Install Node.js dependencies using npm
-                sh 'npm install',
-                sh 'npm install nodemon'
+                sh 'npm install && npm install nodemon'
             }
         }
         
