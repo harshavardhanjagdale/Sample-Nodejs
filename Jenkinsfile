@@ -43,6 +43,7 @@ pipeline {
         always {
             // This block is executed regardless of the pipeline result
             // Clean up or perform any necessary actions here
+            echo 'Pipeline completed'
         }
     }
 }
