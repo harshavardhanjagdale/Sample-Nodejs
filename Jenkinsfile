@@ -2,34 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Example Stage') {
             steps {
-                // Checkout the source code from the Git repository
-                git url: 'https://github.com/harshavardhanjagdale/Sample-Nodejs'
+                echo 'Hello, world!'
             }
         }
-        
-        stage('Install Dependencies') {
-            steps {
-                // Install Node.js dependencies using npm
-                sh 'npm install && npm install nodemon'
-            }
-        }
-        
     }
     
     post {
-        success {
-            // This block is executed if the pipeline succeeds
-            echo 'Pipeline succeeded!'
-        }
-        failure {
-            // This block is executed if the pipeline fails
-            echo 'Pipeline failed!'
-        }
         always {
-            // This block is executed regardless of the pipeline result
-            // Clean up or perform any necessary actions here
+            echo 'Pipeline completed'
         }
     }
 }
