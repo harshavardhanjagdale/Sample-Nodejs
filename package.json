@@ -5,6 +5,7 @@
   "scripts": {
     "test": "echo 'running script'",
     "start": "echo 'building script'",
+    "build": "echo 'running the application'"
     "format": "prettier --write \"**/*.js\""
   },
   "keywords": [],
